@@ -56,9 +56,15 @@ ${text}
 
     const output = response.output_text;
 
-    return res.status(200).json({
-      result: output,
-    });
+let parsed;
+
+try {
+  parsed = JSON.parse(output);
+} catch (e) {
+  parsed = { error: "Geen geldige JSON", raw: output };
+}
+
+return res.status(200).json(parsed);
   } catch (error) {
     console.error("OpenAI fout:", error);
 
