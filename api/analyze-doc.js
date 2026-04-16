@@ -34,10 +34,13 @@ GEEN uitleg, GEEN tekst, alleen JSON.
 
 Gebruik dit formaat:
 {
-  "naam": "",
-  "kvk": "",
-  "adres": "",
-  "waarde": 0
+  "naamKlant": "",
+  "vermogen": 0,
+  "aantalPanden": 0,
+  "woonland": "",
+  "aankoopprijs": 0,
+  "marktwaarde": 0,
+  "huur": 0
 }
 
 Als iets niet gevonden is, gebruik lege string "" of 0.
