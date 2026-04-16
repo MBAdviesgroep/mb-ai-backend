@@ -45,10 +45,11 @@ ${text}
       result: output,
     });
 
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({
-      error: "AI error",
-    });
-  }
+} catch (error) {
+  console.error("OpenAI fout:", error);
+
+  return res.status(500).json({
+    error: "AI error",
+    message: error?.message || "Onbekende fout"
+  });
 }
