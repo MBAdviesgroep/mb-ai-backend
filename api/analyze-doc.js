@@ -29,14 +29,18 @@ Je bent een document-analyse AI voor vastgoedfinancieringen.
 
 Documenttype: ${type}
 
-Haal de belangrijkste gegevens eruit en geef ALLEEN geldige JSON terug.
+Geef ALLEEN geldige JSON terug.
+GEEN uitleg, GEEN tekst, alleen JSON.
 
-Voorbeeld:
+Gebruik dit formaat:
 {
-  "rechtsvorm": "BV",
-  "marktwaarde": 450000,
-  "risico": "laag"
+  "naam": "",
+  "kvk": "",
+  "adres": "",
+  "waarde": 0
 }
+
+Als iets niet gevonden is, gebruik lege string "" of 0.
 
 Tekst:
 ${text}
